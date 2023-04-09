@@ -4,7 +4,7 @@ lsp.preset('recommended')
 
 lsp.ensure_installed({
 	'clangd',
-	'foam_ls',
+--	'foam_ls',
 })
 
 

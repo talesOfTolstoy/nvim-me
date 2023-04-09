@@ -35,12 +35,18 @@ return require('packer').startup(function(use)
 --    }
 
 	use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+--    use {
+--        'nvim-treesitter/nvim-treesitter',
+--        run = function()
+--            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+--            ts_update()
+--        end,
+--    }
 	use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
     use('eandrju/cellular-automaton.nvim')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-
 	use {'nvim-lualine/lualine.nvim'}
 
 --	use({
@@ -52,6 +58,8 @@ return require('packer').startup(function(use)
 --
 --    	})
 
+    -- Lua
+    use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
 
     use {'sidebar-nvim/sidebar.nvim'}
     use {'anuvyklack/middleclass'}
