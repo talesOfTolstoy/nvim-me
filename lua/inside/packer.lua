@@ -13,6 +13,16 @@ return require('packer').startup(function(use)
 		requires = { {'nvim-lua/plenary.nvim'} }
 
 	}
+    use {
+        "SmiteshP/nvim-navbuddy",
+        requires = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+            "numToStr/Comment.nvim",        -- Optional
+            "nvim-telescope/telescope.nvim" -- Optional
+        }
+    }
 
 	use({
 		'sainnhe/everforest',
@@ -44,11 +54,23 @@ return require('packer').startup(function(use)
 --    }
 	use('nvim-treesitter/playground')
 	use('theprimeagen/harpoon')
+--    use('neomake/neomake')
+    use('daeyun/vim-matlab')
     use('eandrju/cellular-automaton.nvim')
 	use('mbbill/undotree')
 	use('tpope/vim-fugitive')
-	use {'nvim-lualine/lualine.nvim'}
-
+    use {
+        'astaos/nvim-ultivisual',
+        config = function() require("nvim-ultivisual").setup() end,
+    }
+	use('nvim-lualine/lualine.nvim')
+    use({
+        "giusgad/pets.nvim",
+        requires = {
+            "giusgad/hologram.nvim",
+            "MunifTanjim/nui.nvim",
+        }
+    })
 --	use({
 --		"neanias/everforest-nvim",
 --		-- Optional; default configuration will be used if setup isn't called.
@@ -60,7 +82,6 @@ return require('packer').startup(function(use)
 
     -- Lua
     use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
-
     use {'sidebar-nvim/sidebar.nvim'}
     use {'anuvyklack/middleclass'}
     use {'anuvyklack/animation.nvim', 
@@ -78,6 +99,8 @@ return require('packer').startup(function(use)
                 require('windows').setup()
     end
     }
+
+    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
 
 	use {
 		'VonHeikemen/lsp-zero.nvim',

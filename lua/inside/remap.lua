@@ -51,3 +51,11 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 
 vim.keymap.set("n", "<leader>fml", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>fmk", "<cmd>CellularAutomaton game_of_life<CR>")
+
+--open terminal:
+--vim.keymap.set("n", "<leader>ot", "<cmd>terminal<CR>", { noremap = true, silent = true })
+
+vim.keymap.set("n", "<leader>dog", "<cmd>PetsNew dog<CR>")
+vim.keymap.set("n", "<leader>kill", "<cmd>PetsKillAll<CR>")
+vim.keymap.set("n", "<leader>slime", "<cmd>PetsNew slime<CR>")
+

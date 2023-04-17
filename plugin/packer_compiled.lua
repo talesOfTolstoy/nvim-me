@@ -74,6 +74,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numToStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/LuaSnip",
@@ -83,6 +88,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/animation.nvim",
     url = "https://github.com/anuvyklack/animation.nvim"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cellular-automaton.nvim"] = {
     loaded = true,
@@ -135,6 +145,11 @@ _G.packer_plugins = {
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["hologram.nvim"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/hologram.nvim",
+    url = "https://github.com/giusgad/hologram.nvim"
+  },
   ["lsp-zero.nvim"] = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/lsp-zero.nvim",
@@ -160,6 +175,11 @@ _G.packer_plugins = {
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/middleclass",
     url = "https://github.com/anuvyklack/middleclass"
   },
+  ["nui.nvim"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/nui.nvim",
+    url = "https://github.com/MunifTanjim/nui.nvim"
+  },
   ["nvim-cmp"] = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-cmp",
@@ -170,10 +190,26 @@ _G.packer_plugins = {
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-navbuddy"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-navbuddy",
+    url = "https://github.com/SmiteshP/nvim-navbuddy"
+  },
+  ["nvim-navic"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-navic",
+    url = "https://github.com/SmiteshP/nvim-navic"
+  },
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ultivisual"] = {
+    config = { "\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ultivisual\frequire\0" },
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/nvim-ultivisual",
+    url = "https://github.com/astaos/nvim-ultivisual"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -184,6 +220,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
+  },
+  ["pets.nvim"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/pets.nvim",
+    url = "https://github.com/giusgad/pets.nvim"
   },
   playground = {
     loaded = true,
@@ -215,6 +256,11 @@ _G.packer_plugins = {
     path = "/Users/user/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
   },
+  ["vim-matlab"] = {
+    loaded = true,
+    path = "/Users/user/.local/share/nvim/site/pack/packer/start/vim-matlab",
+    url = "https://github.com/daeyun/vim-matlab"
+  },
   ["windows.nvim"] = {
     config = { "\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\r\0=\1\2\0006\0\0\0009\0\1\0)\1\r\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0" },
     loaded = true,
@@ -224,14 +270,18 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: everforest
-time([[Config for everforest]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme everforest\bcmd\bvim\0", "config", "everforest")
-time([[Config for everforest]], false)
 -- Config for: windows.nvim
 time([[Config for windows.nvim]], true)
 try_loadstring("\27LJ\2\nå\1\0\0\3\0\b\0\0186\0\0\0009\0\1\0)\1\r\0=\1\2\0006\0\0\0009\0\1\0)\1\r\0=\1\3\0006\0\0\0009\0\1\0+\1\1\0=\1\4\0006\0\5\0'\2\6\0B\0\2\0029\0\a\0B\0\1\1K\0\1\0\nsetup\fwindows\frequire\16equalalways\16winminwidth\rwinwidth\6o\bvim\0", "config", "windows.nvim")
 time([[Config for windows.nvim]], false)
+-- Config for: everforest
+time([[Config for everforest]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme everforest\bcmd\bvim\0", "config", "everforest")
+time([[Config for everforest]], false)
+-- Config for: nvim-ultivisual
+time([[Config for nvim-ultivisual]], true)
+try_loadstring("\27LJ\2\n=\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\20nvim-ultivisual\frequire\0", "config", "nvim-ultivisual")
+time([[Config for nvim-ultivisual]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
