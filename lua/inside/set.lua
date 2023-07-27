@@ -20,7 +20,7 @@ vim.opt.hlsearch = false
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
+vim.opt.signcolumn = "no" -- change to "yes" to see the symbols on the left of the text (yellow, red & green)
 vim.opt.isfname:append("@-@")
 
 vim.opt.updatetime = 50

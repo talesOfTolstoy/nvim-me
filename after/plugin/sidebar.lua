@@ -7,7 +7,7 @@ require("sidebar-nvim").setup({
     hide_statusline = false,
     update_interval = 1000,
     sections = { "datetime", "git", "files", "containers", "symbols", "buffers" },
-    section_separator = {"", "-----", ""},
+    section_separator = {"", "-----------------", ""},
     section_title_separator = {""},
     containers = {
         attach_shell = "/bin/sh", show_all = true, interval = 5000,

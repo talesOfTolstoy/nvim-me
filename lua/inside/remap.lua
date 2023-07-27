@@ -6,6 +6,8 @@ vim.keymap.set("n", "<leader>pv", ":Ex<CR>")
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+vim.keymap.set("n", "<leader>ref", ":edit<CR> <BAR> :$<CR>") --refresh a file (space + ref) and go to last line
+
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
@@ -59,3 +61,11 @@ vim.keymap.set("n", "<leader>dog", "<cmd>PetsNew dog<CR>")
 vim.keymap.set("n", "<leader>kill", "<cmd>PetsKillAll<CR>")
 vim.keymap.set("n", "<leader>slime", "<cmd>PetsNew slime<CR>")
 
+vim.keymap.set("n", "<leader>rt", "<C-w>k <BAR> 15<C-w>+")
+
+
+vim.keymap.set("n", "<leader>mw", ":WindowsMaximize<CR>")
+
+vim.keymap.set("n", "<leader>com", ":VimtexCompile<CR>") -- starts vimtex compiler (set on background)
+
+vim.keymap.set("n", "<leader>cg", ":w <BAR> compiler vlty <BAR> make <BAR> :cw <CR><ESC>") -- compiles grammar in vimtex
