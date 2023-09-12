@@ -7,12 +7,12 @@ print("Hello from the inside")
 --vim.api.nvim_command([[autocmd VimEnter * :rightb split term://$SHELL | 15wincmd - | set nonumber]])
 
 
-vim.api.nvim_command([[autocmd VimEnter * ++nested :rightb split term://$SHELL |  set nonumber]])
+vim.api.nvim_command([[autocmd VimEnter * ++nested :rightb split term://$SHELL |  set nonumber | wincmd k | wincmd 15+]])
 
-vim.api.nvim_command('autocmd VimEnter * wincmd k ')
-vim.api.nvim_command('autocmd VimEnter * wincmd 15+')
+--vim.api.nvim_command('autocmd VimEnter * wincmd k ')
+-- vim.api.nvim_command('autocmd VimEnter * wincmd 15+')
 
-vim.api.nvim_command('autocmd VimEnter * wincmd k | Startup display')
+--vim.api.nvim_command('autocmd VimEnter * wincmd k | Startup display')
 
 -- vim.api.nvim_command([[autocmd VimEnter * wincmd k | resize +15]])
 
