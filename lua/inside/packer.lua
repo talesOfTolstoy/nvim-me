@@ -31,22 +31,22 @@ return require('packer').startup(function(use)
         }
     }
 
-    use {
-        "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-        config = function()
-            require("startup").setup(require("inside.startup_nvim"))
-        end
-    }
+--    use {
+--        "startup-nvim/startup.nvim",
+--        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+--        config = function()
+--            require("startup").setup(require("inside.startup_nvim"))
+--        end
+--    }
 
-    use({
-        'sainnhe/everforest',
-        as = 'everforest',
-        config = function()
-            vim.cmd('colorscheme everforest')
-        end
-    })
-
+--    use({
+--        'sainnhe/everforest',
+--        as = 'everforest',
+--        config = function()
+--            vim.cmd('colorscheme everforest')
+--        end
+--    })
+--
 
     use {
         "dzfrias/arena.nvim",

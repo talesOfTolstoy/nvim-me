@@ -1,13 +1,18 @@
 require("inside.remap")
 require("inside.set")
+require("inside.abbreviations")
 print("Hello from the inside")
 
 --vim.api.nvim_command('autocmd VimEnter * <command name>')
 
 --vim.api.nvim_command([[autocmd VimEnter * :rightb split term://$SHELL | 15wincmd - | set nonumber]])
 
+-- THIS BELOW IS THE ORIGINAL
+--vim.api.nvim_command([[autocmd VimEnter * ++nested :rightb split term://$SHELL |  set nonumber | wincmd k | wincmd 15+]])
 
-vim.api.nvim_command([[autocmd VimEnter * ++nested :rightb split term://$SHELL |  set nonumber | wincmd k | wincmd 15+]])
+
+--vim.api.nvim_command([[autocmd VimEnter * ++nested :lua vim.api.nvim_command('rightb split term://$SHELL<CR> | 15<C-w>- | set nonumber<CR>')]])
+--vim.api.nvim_command([[autocmd VimEnter * ++nested :
 
 --vim.api.nvim_command('autocmd VimEnter * wincmd k ')
 -- vim.api.nvim_command('autocmd VimEnter * wincmd 15+')
