@@ -69,3 +69,13 @@ vim.keymap.set("n", "<leader>mw", ":WindowsMaximize<CR>")
 vim.keymap.set("n", "<leader>com", ":VimtexCompile<CR>") -- starts vimtex compiler (set on background)
 
 vim.keymap.set("n", "<leader>cg", ":w <BAR> compiler vlty <BAR> make <BAR> :cw <CR><ESC>") -- compiles grammar in vimtex
+
+vim.keymap.set('t', '<C-w>k', "<C-\\><C-n><C-w>k",{silent = true})
+
+vim.keymap.set('n', '<C-a><C-r>', ":ArenaToggle<CR>")
+
+vim.keymap.set('n', '<leader>tt', ":tabnew<CR>")
+vim.keymap.set('n', '<leader>tq', ":tabclose<CR>")
+
+vim.keymap.set('n', '<leader>cm', "@g")
+

@@ -16,6 +16,28 @@ return require('packer').startup(function(use)
 
     use 'lervag/vimtex'
 
+    use "rebelot/kanagawa.nvim"
+    use 'folke/tokyonight.nvim'
+    use { "catppuccin/nvim", as = "catppuccin" }
+
+    use {
+        "SmiteshP/nvim-navbuddy",
+        requires = {
+            "neovim/nvim-lspconfig",
+            "SmiteshP/nvim-navic",
+            "MunifTanjim/nui.nvim",
+            "numToStr/Comment.nvim",        -- Optional
+            "nvim-telescope/telescope.nvim" -- Optional
+        }
+    }
+
+    use {
+        "startup-nvim/startup.nvim",
+        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        config = function()
+            require("startup").setup(require("inside.startup_nvim"))
+        end
+    }
 
     use({
         'sainnhe/everforest',
@@ -25,28 +47,60 @@ return require('packer').startup(function(use)
         end
     })
 
+
+    use {
+        "dzfrias/arena.nvim",
+        config = function()
+            require("arena").setup()
+        end
+    }
+
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
 
     use 'nvim-tree/nvim-web-devicons'
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
-    }
+    --    use {
+    --        'nvim-tree/nvim-tree.lua',
+    --        requires = {
+    --            'nvim-tree/nvim-web-devicons', -- optional
+    --        },
+    --        config = function()
+    --            require("nvim-tree").setup {}
+    --        end
+    --    }
+
+    use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+    --    use {
+    --        'nvim-treesitter/nvim-treesitter',
+    --        run = function()
+    --            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+    --            ts_update()
+    --        end,
+    --    }
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
     --    use('neomake/neomake')
+    use('daeyun/vim-matlab')
+    use('eandrju/cellular-automaton.nvim')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
     use('nvim-lualine/lualine.nvim')
 
+    use({
+        "giusgad/pets.nvim",
+        requires = {
+            "giusgad/hologram.nvim",
+            "MunifTanjim/nui.nvim",
+        }
+    })
+
+
     -- Lua
-    use {'sidebar-nvim/sidebar.nvim'}
+    use ({'sidebar-nvim/sidebar.nvim',
+        requires='nvim-tree/nvim-web-devicons'})
+
     use {'anuvyklack/middleclass'}
     use {'anuvyklack/animation.nvim', 
         requires = 'anuvyklack/middleclass'
@@ -63,6 +117,9 @@ return require('packer').startup(function(use)
             require('windows').setup()
         end
     }
+    use 'dhananjaylatkar/cscope_maps.nvim' -- cscope keymaps
+
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
@@ -86,6 +143,13 @@ return require('packer').startup(function(use)
         }
 
     }
+
+--    use({
+--        "andrewferrier/wrapping.nvim",
+--        config = function()
+--            require("wrapping").setup()
+--        end,
+--    })
 
 end)
 
